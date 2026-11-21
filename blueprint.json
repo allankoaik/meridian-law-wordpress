@@ -1,0 +1,16 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Meridian Injury Law: bilingual WordPress demo",
+		"author": "allankoaik"
+	},
+	"landingPage": "/",
+	"preferredVersions": { "php": "8.3", "wp": "latest" },
+	"login": true,
+	"steps": [
+		{ "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "polylang" }, "options": { "activate": true } },
+		{ "step": "installPlugin", "pluginData": { "resource": "url", "url": "https://raw.githubusercontent.com/allankoaik/meridian-law-wordpress/main/dist/meridian-core.zip" }, "options": { "activate": true } },
+		{ "step": "installTheme", "themeData": { "resource": "url", "url": "https://raw.githubusercontent.com/allankoaik/meridian-law-wordpress/main/dist/meridian-theme.zip" }, "options": { "activate": true } },
+		{ "step": "runPHP", "code": "<?php define( 'WP_ADMIN', true ); require '/wordpress/wp-load.php'; echo meridian_seed();" }
+	]
+}

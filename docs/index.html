@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meridian Injury Law: Bilingual WordPress Build</title>
+	<meta name="description" content="Portfolio project: a bilingual (English/Spanish) WordPress block theme for a multi-state injury law firm, with reusable templates, accessible navigation and forms.">
+	<style>
+		:root {
+			--navy: #13294B; --navy-dark: #0C1B33; --gold: #C8A24A; --gold-light: #E9D9AE;
+			--cream: #F7F4EE; --ink: #1F2933; --slate: #52606D; --line: #DDD6C8; --bg: #fff;
+		}
+		* { box-sizing: border-box; }
+		body { margin: 0; background: var(--bg); color: var(--ink); font: 1.0625rem/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+		a { color: var(--navy); }
+		a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+		.wrap { max-width: 1100px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 2rem); }
+		h1, h2, h3 { font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif; color: var(--navy); line-height: 1.2; }
+		.skip { position: absolute; left: -9999px; }
+		.skip:focus { left: 1rem; top: 1rem; background: #fff; padding: .5rem 1rem; z-index: 10; }
+
+		.hero { background: linear-gradient(135deg, var(--navy-dark), var(--navy) 60%); color: #fff; padding: clamp(3rem, 9vw, 6rem) 0; }
+		.hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.25rem); margin: .75rem 0 1rem; max-width: 18ch; }
+		.hero p { color: rgba(255,255,255,.88); font-size: 1.2rem; max-width: 44rem; }
+		.tag { display: inline-block; padding: .35rem .85rem; border-radius: 999px; background: rgba(200,162,74,.2); color: var(--gold-light); font-size: .875rem; font-weight: 600; }
+		.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+		.btn { display: inline-flex; align-items: center; min-height: 48px; padding: .8rem 1.4rem; border-radius: 6px; font-weight: 700; text-decoration: none; border: 2px solid transparent; }
+		.btn-gold { background: var(--gold); color: var(--navy-dark); }
+		.btn-gold:hover { background: var(--gold-light); }
+		.btn-outline { color: #fff; border-color: rgba(255,255,255,.7); }
+		.btn-outline:hover { background: #fff; color: var(--navy); }
+		.note { margin-top: 1rem; font-size: .9rem; color: rgba(255,255,255,.7) !important; }
+
+		section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+		.cream { background: var(--cream); }
+		.grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); list-style: none; padding: 0; margin: 2rem 0 0; }
+		.card { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 10px; padding: 1.25rem 1.4rem; }
+		.card h3 { margin: 0 0 .4rem; font-size: 1.15rem; }
+		.card p { margin: 0; color: var(--slate); font-size: .975rem; }
+		.shots { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); margin-top: 2rem; }
+		figure { margin: 0; }
+		figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); border-radius: 10px; }
+		figcaption { color: var(--slate); font-size: .9rem; margin-top: .5rem; }
+		table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; font-size: .975rem; }
+		th, td { text-align: left; padding: .7rem .75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+		th { color: var(--navy); }
+		code { background: var(--cream); padding: .1rem .35rem; border-radius: 4px; font-size: .9em; }
+		footer { background: var(--navy-dark); color: rgba(255,255,255,.75); padding: 2rem 0; font-size: .9rem; }
+		footer a { color: #fff; }
+		.table-scroll { overflow-x: auto; }
+	</style>
+</head>
+<body>
+	<a class="skip" href="#main">Skip to content</a>
+	<header class="hero">
+		<div class="wrap">
+			<span class="tag">Portfolio project · WordPress · English &amp; Spanish</span>
+			<h1>Meridian Injury Law: bilingual WordPress build</h1>
+			<p>A custom WordPress block theme for a multi-state injury law firm, with reusable templates for practice areas, state and city pages, attorney bios and articles. The firm's team can edit and add pages without touching code.</p>
+			<div class="actions">
+				<a class="btn btn-gold" href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/allankoaik/meridian-law-wordpress/main/blueprint.json">Open the live demo</a>
+				<a class="btn btn-outline" href="https://github.com/allankoaik/meridian-law-wordpress">View the code on GitHub</a>
+			</div>
+			<p class="note">The demo runs real WordPress in your browser (WordPress Playground) and takes about 20–40 seconds to load. You're signed in as an admin, so you can open the editor. Meridian Injury Law is a fictional firm.</p>
+		</div>
+	</header>
+
+	<main id="main">
+		<section>
+			<div class="wrap">
+				<h2>Screenshots</h2>
+				<div class="shots">
+					<figure><img src="screenshots/home-desktop.png" alt="Homepage on desktop: navy hero with the headline 'Hurt in an accident? We fight so you can heal.', a gold stats bar and practice area cards." loading="lazy" width="1280" height="800"><figcaption>Homepage (desktop)</figcaption></figure>
+					<figure><img src="screenshots/home-spanish.png" alt="The same homepage in Spanish with the language switcher set to ES." loading="lazy" width="1280" height="800"><figcaption>Spanish version at /es/</figcaption></figure>
+					<figure><img src="screenshots/state-page.png" alt="Texas state page listing its Houston, Dallas and San Antonio offices as cards." loading="lazy" width="1280" height="800"><figcaption>State page that lists its city offices</figcaption></figure>
+					<figure><img src="screenshots/attorney-bio.png" alt="Attorney bio page for María Delgado with a monogram, role and credentials." loading="lazy" width="1280" height="800"><figcaption>Attorney bio template</figcaption></figure>
+					<figure><img src="screenshots/home-mobile.png" alt="Homepage on a phone with the menu open, showing links, the EN/ES switcher and a consultation button." loading="lazy" width="390" height="844" style="max-width:320px"><figcaption>Mobile menu</figcaption></figure>
+					<figure><img src="screenshots/home-full.png" alt="Full-length homepage: hero, stats, practice areas, reasons to choose the firm, offices, attorneys, articles, consultation form and footer." loading="lazy" width="1280"><figcaption>Full homepage</figcaption></figure>
+				</div>
+			</div>
+		</section>
+
+		<section class="cream">
+			<div class="wrap">
+				<h2>What's included</h2>
+				<ul class="grid">
+					<li class="card"><h3>Reusable templates</h3><p>Block theme templates for the homepage, pages, practice areas, attorneys, locations, articles, search and 404, with shared header and footer parts.</p></li>
+					<li class="card"><h3>Global styles</h3><p>Colours, typography, spacing and buttons defined once in <code>theme.json</code> and editable in the Site Editor.</p></li>
+					<li class="card"><h3>State and city pages</h3><p>Hierarchical locations, so each state lists its cities automatically: <code>/locations/texas/houston/</code>.</p></li>
+					<li class="card"><h3>English &amp; Spanish</h3><p>Polylang for <code>/es/</code> URLs, translation links and hreflang. Menus, footer and form text switch language automatically.</p></li>
+					<li class="card"><h3>Accessible navigation</h3><p>Skip link, labelled nav, a keyboard-friendly mobile menu that closes with Escape, and clear focus outlines.</p></li>
+					<li class="card"><h3>Accessible forms</h3><p>Labelled fields, autocomplete, an error summary that receives focus and inline errors linked to their fields.</p></li>
+					<li class="card"><h3>No-code editing</h3><p>New practice areas, attorneys or cities appear automatically in menus, card grids and the contact form.</p></li>
+					<li class="card"><h3>Fast &amp; light</h3><p>Inline SVG icons, system fonts and under 1 KB of JavaScript. Native WordPress lazy loading and srcset for photos.</p></li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<div class="wrap">
+				<h2>How it's built</h2>
+				<div class="table-scroll">
+					<table>
+						<thead><tr><th scope="col">Part</th><th scope="col">Details</th></tr></thead>
+						<tbody>
+							<tr><td>Theme</td><td>WordPress block theme, theme.json v3, HTML templates and template parts</td></tr>
+							<tr><td>Plugin</td><td>Custom post types, bilingual helpers, consultation form, SEO tags and a demo content installer. Kept separate from the theme so content survives a redesign.</td></tr>
+							<tr><td>Languages</td><td>Polylang (English default with no prefix, Spanish under <code>/es/</code>)</td></tr>
+							<tr><td>Forms</td><td>Server-side validation, nonce and honeypot spam protection, submissions saved as private "Inquiries" and emailed to the admin</td></tr>
+							<tr><td>SEO</td><td>Meta descriptions, LegalService structured data, hreflang alternates</td></tr>
+							<tr><td>Workflow</td><td>AI-assisted development (Claude Code), with every change reviewed and tested by hand</td></tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<div class="wrap">
+			<p>Built by Allan Koaik. Meridian Injury Law is a fictional firm created for this portfolio project. <a href="https://github.com/allankoaik/meridian-law-wordpress">Source on GitHub</a>.</p>
+		</div>
+	</footer>
+</body>
+</html>

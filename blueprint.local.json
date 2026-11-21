@@ -1,0 +1,12 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/",
+	"preferredVersions": { "php": "8.3", "wp": "latest" },
+	"login": true,
+	"steps": [
+		{ "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "polylang" }, "options": { "activate": true } },
+		{ "step": "activatePlugin", "pluginPath": "meridian-core/meridian-core.php" },
+		{ "step": "activateTheme", "themeFolderName": "meridian" },
+		{ "step": "runPHP", "code": "<?php define( 'WP_ADMIN', true ); require '/wordpress/wp-load.php'; echo meridian_seed();" }
+	]
+}

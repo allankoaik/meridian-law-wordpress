@@ -1,0 +1,25 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","anchor":"main","layout":{"type":"constrained"}} -->
+<main class="wp-block-group" id="main">
+<!-- wp:shortcode -->
+[meridian_heading key="art"]
+<!-- /wp:shortcode -->
+
+<!-- wp:query {"queryId":1,"query":{"inherit":true},"align":"wide","className":"mx-query mx-section"} -->
+<div class="wp-block-query alignwide mx-query mx-section"><!-- wp:post-template -->
+<!-- wp:post-date {"className":"mx-card__meta"} /-->
+<!-- wp:post-title {"isLink":true,"level":2,"className":"mx-card__title"} /-->
+<!-- wp:post-excerpt {"moreText":"","excerptLength":28} /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-previous /-->
+<!-- wp:query-pagination-numbers /-->
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination --></div>
+<!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
