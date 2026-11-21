@@ -7,6 +7,7 @@
 	"landingPage": "/",
 	"preferredVersions": { "php": "8.3", "wp": "latest" },
 	"login": true,
+	"features": { "networking": true },
 	"steps": [
 		{ "step": "installPlugin", "pluginData": { "resource": "wordpress.org/plugins", "slug": "polylang" }, "options": { "activate": true } },
 		{ "step": "installPlugin", "pluginData": { "resource": "url", "url": "https://raw.githubusercontent.com/allankoaik/meridian-law-wordpress/main/dist/meridian-core.zip" }, "options": { "activate": true } },

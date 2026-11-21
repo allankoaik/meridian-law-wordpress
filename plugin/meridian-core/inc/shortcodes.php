@@ -128,7 +128,7 @@ add_shortcode( 'meridian_footer', function () {
 add_shortcode( 'meridian_heading', function ( $atts ) {
 	$atts = shortcode_atts( array( 'key' => 'pa' ), $atts );
 	$key  = sanitize_key( $atts['key'] );
-	return '<header class="mx-page-head"><div class="mx-page-head__inner"><h1>' . esc_html( meridian_t( $key . '_title' ) ) . '</h1><p>' . esc_html( meridian_t( $key . '_intro' ) ) . '</p></div></header>';
+	return '<header class="mx-page-head alignfull"><div class="mx-page-head__inner"><h1>' . esc_html( meridian_t( $key . '_title' ) ) . '</h1><p>' . esc_html( meridian_t( $key . '_intro' ) ) . '</p></div></header>';
 } );
 
 /* ---------------------------------------------------------------- Card grids */
